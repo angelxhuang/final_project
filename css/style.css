@@ -8,15 +8,14 @@ body{
 
 nav{
     background-color: #F6C8BE;
-    padding-top: 15px;
-    padding-bottom: 15px;
     text-align: left;
     font-family: "IBM Plex Sans"
 }
 nav li{
-    display: inline; 
-    align-items: center;
-    
+    display: block;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 8px;
 }
 
 nav a{
@@ -277,6 +276,47 @@ header h1{
 }
 
 @media screen and (min-width: 800px){
+    nav{
+        background-color: #F6C8BE;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-family: "IBM Plex Sans"
+    }
+    nav li{
+        display: inline; 
+        align-items: center;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    
+    nav a{
+        color: black;
+        font-weight: bold;
+        text-decoration: none; 
+    }
+    
+    nav a:hover{
+        border: black solid 2px;
+        text-decoration: underline;
+        color: black;
+        background-color: white;
+        border-radius: 8px;
+        opacity: 50%;
+        padding: 10px;
+    }
+      
+    nav a:focus{
+        text-decoration: underline;
+    }
+    
+    .here{
+        color: rgb(144, 47, 47);
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
     .clubs{
         display: flex;
         flex-direction: column;
