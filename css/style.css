@@ -491,16 +491,29 @@ header h1{
     }
     
     .about_text-block, .early_signs_text-block, .statistics_text-block, .why_text-block{
-        margin: auto;
+        margin-bottom: 20px;
         text-align: center;
         word-wrap: break-word;
     }
     
     div.about_text-block, div.early_signs_text-block, div.statistics_text-block, div.why_text-block{
         width: 1300px;
-        border: 1px solid black;
+        box-shadow: 4px 4px 0px 0px rgba(168, 108, 108, 1);
     }
     
+    div.about_text-block, div.statistics_text-block{
+        margin-left: 20px;
+        transition: transform 250ms;
+    }
+
+    div.about_text-block:hover, div.early_signs_text-block:hover, div.statistics_text-block:hover, div.why_text-block:hover{
+        transform: translateY(-10px);
+    }
+
+    div.early_signs_text-block, div.why_text-block{
+        margin-right: 20px;
+        transition: transform 250ms;
+    }
     .clubs{
         display: flex;
         flex-direction: column;
@@ -631,6 +644,56 @@ header h1{
         align-self: center;
         justify-content: center;
     }
+    :root,
+    :root.light {
+        --bg-color: #fff;
+        --text-color: #123;
+    }
+ 
+    :root.purple {
+        --bg-color: #E7DBEB;
+        --text-color: #111213;
+    }
+ 
+    :root.blue {
+        --bg-color: #7d98b1;
+        --text-color: #111213;
+    }
+ 
+    :root.pink {
+        --bg-color: #f4c6ce;
+        --text-color: #111213;
+    }
+ 
+    :root.yellow {
+        --bg-color: rgb(246, 250, 201);
+        --text-color: #111213;
+    }
+ 
+    :root.sage {
+        --bg-color: #d4ebc7;
+        --text-color: #111213;
+    }
+
+    select {
+        padding: 15px;
+        font-size: 20px;
+        font-family: inherit;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        border-radius: 20px;
+        border: solid 1px black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        margin: 0;
+        background-color: var(--bg-color);
+        background-image: var(--bg-url);
+        color: var(--text-color);
+        font-family: var(--font-family, "IBM Plex Sans", sans-serif);
+    }
+    
 } 
 
 
