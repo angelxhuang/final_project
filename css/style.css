@@ -2,8 +2,17 @@ body{
     background-color: #F7F3F2;
 }
 
-.skip{
-    font-family: "IBM Plex Sans";
+.skip {
+    position: absolute;
+    font: "IBM Plex Sans"
+    padding: 1em;
+    background-color: white;
+}
+
+.skip:focus {
+    left: 50%;  
+    transform: translateX(-50%);
+    opacity: 1;
 }
 
 nav{
@@ -275,6 +284,42 @@ header h1{
     justify-content: center;
 }
 
+/* about us css */
+.grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-self: center;
+    justify-content: center;
+}
+
+.grid2 img{
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.textgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+
+.textgrid p {
+    padding: 0px 75px 0px 75px
+}
+
 @media screen and (min-width: 800px){
     nav{
         background-color: #F6C8BE;
@@ -437,6 +482,25 @@ header h1{
         row-gap: 20px;
         align-self: center;
         justify-content: center;
+    }
+
+    /* about us page */
+    .grid2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .grid2 img{
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 250px;
+        width: 250px;
+        align-self: center;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -693,9 +757,16 @@ header h1{
         color: var(--text-color);
         font-family: var(--font-family, "IBM Plex Sans", sans-serif);
     }
-    
+
+    /* about us page */
+    .grid2 img{
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 300px;
+        width: 300px;
+        align-self: center;
+        margin: 0 auto;
+        display: block;
+    }
 } 
-
-
-
 
