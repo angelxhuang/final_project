@@ -4,21 +4,25 @@ body{
 
 .skip {
     position: absolute;
-    font: "IBM Plex Sans"
+    font: "IBM Plex Sans";
+    left: -9999px;
+    z-index: 999;
     padding: 1em;
     background-color: white;
+    opacity: 0;
 }
-
+    
 .skip:focus {
-    left: 50%;  
+    left: 50%;
     transform: translateX(-50%);
     opacity: 1;
 }
 
 nav{
     background-color: #F6C8BE;
-    text-align: left;
-    font-family: "IBM Plex Sans"
+    text-align: right;
+    font-family: "IBM Plex Sans";
+    padding-top: 10px;
 }
 nav li{
     display: block;
@@ -51,14 +55,15 @@ nav a:focus{
     color: rgb(144, 47, 47);
     background-color: white;
     border-radius: 8px;
-    padding: 10px;
+    padding: 4px;
 }
 
 .title{
     display: flex;
     height: 600px;
+    width: auto;
     background-image: url("../images/um.jpeg");
-    background-position: center;
+    background-position: left;
     opacity: 80%;
     align-items: center;
     justify-content: center;
@@ -71,46 +76,65 @@ nav a:focus{
     color: white;
     -webkit-text-stroke-color: #BD8D82;
     -webkit-text-stroke-width: 1px;
-    font-size: 80px;
+    font-size: 78px;
 }
 
 .about_text-block > h2{
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
+    font-family: "IBM Plex Sans";
 }
 
 .about_text-block > p{
     font-size: 20px;
-    padding: 0px 200px 0px 200px;
+    padding: 20px;
+    font-family: "IBM Plex Sans";
 }
 
 .early_signs_text-block > h2{
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
+    font-family: "IBM Plex Sans";
 }
 
 .early_signs_text-block > p{
     font-size: 20px;
-    padding: 0px 200px 0px 200px;
+    padding: 20px;
+    font-family: "IBM Plex Sans";
 }
 
 .why_text-block > p{
     font-size: 20px;
-    padding: 0px 200px 0px 200px;
+    padding: 20px;
+    font-family: "IBM Plex Sans";
 }
 
 .statistics_text-block > h2{
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
+    font-family: "IBM Plex Sans";
 }
 
 .why_text-block > h2{
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
+    font-family: "IBM Plex Sans";
+}
+
+.statistics_text-block > h3{
+    font-size: 20px;
+    padding: 20px;
+    font-family: "IBM Plex Sans";
+}
+
+.statistics_text-block > ul{
+    font-size: 20px;
+    padding: 20px;
+    font-family: "IBM Plex Sans";
 }
 
 footer{
@@ -132,12 +156,19 @@ footer{
     margin: auto;
     text-align: center;
     word-wrap: break-word;
+    font-family: "IBM Plex Sans";
+    padding: 30px;
 }
 
 div.about_text-block, div.early_signs_text-block, div.statistics_text-block, div.why_text-block{
-    width: 1450px;
+    width: auto;
     border-radius: 20px;
-    /* padding: 0px 60px 0px 60px; */
+    box-shadow: 4px 4px 0px 0px rgba(168, 108, 108, 1);
+}
+
+div.early_signs_text-block{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 div.about_text-block{
@@ -156,12 +187,68 @@ div.why_text-block{
     background-color: #ffb7b7;
 }
 
+:root,
+:root.light {
+    --bg-color: #fff;
+    --text-color: #123;
+}
+
+:root.purple {
+    --bg-color: #E7DBEB;
+    --text-color: #111213;
+}
+
+:root.blue {
+    --bg-color: #7d98b1;
+    --text-color: #111213;
+}
+
+:root.pink {
+    --bg-color: #f4c6ce;
+    --text-color: #111213;
+}
+
+:root.yellow {
+    --bg-color: rgb(246, 250, 201);
+    --text-color: #111213;
+}
+
+:root.sage {
+    --bg-color: #d4ebc7;
+    --text-color: #111213;
+}
+
+select {
+    padding: 5px;
+    font-size: 20px;
+    font-family: inherit;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    border: solid 1px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    background-image: var(--bg-url);
+    color: var(--text-color);
+    font-family: var(--font-family, "IBM Plex Sans", sans-serif);
+}
+
 header h1{
     font-family: "Calistoga";
     text-align: center;
-    padding: 10px;
+    padding-top: 10px;
     color: rgba(10, 10, 10, 0.795);
+    font-size: 30px;
 }
+
+header{
+    padding-bottom: 20px;
+}
+
 .clubs{
     display: flex;
     flex-direction: column;
@@ -192,11 +279,10 @@ header h1{
 
 .overlay {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
+    /* bottom: auto;
+    left: auto;
+    right: auto; */
+    height: 200px;
     width: 300px;
     opacity: 0;
     transition: .5s ease;
@@ -209,7 +295,7 @@ header h1{
   
 .text {
     color: black;
-    font-size: 40px;
+    font-size: 30px;
     font-family: "Calistoga";
     position: absolute;
     top: 50%;
@@ -229,6 +315,8 @@ header h1{
 .text-block > h1{
     font-size: 30px;
     text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* resources css */
@@ -245,6 +333,18 @@ header h1{
 .grid p{
     padding: 0px 115px 0px 115px;
     text-align: justify;
+}
+
+.uhs-box > h1, .caps-box > h1,.togetherall-box > h1, .psychiatry-box > h1, .trotter-box > h1, .campus_mind_works-box > h1, .wolverine_wellness-box > h1, .office_student_conflict_resolution-box > h1, .continuum_of_care-box > h1{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: "IBM Plex Sans";
+}
+
+.uhs-box > p, .caps-box > p,.togetherall-box > p, .psychiatry-box > p, .trotter-box > p, .campus_mind_works-box > p, .wolverine_wellness-box > p, .office_student_conflict_resolution-box > p, .continuum_of_care-box > p{
+    text-align: center;
+    font-family: "IBM Plex Sans";
 }
 
 .grid button{
@@ -267,6 +367,7 @@ header h1{
     justify-content: center;
     border-radius: 20px;
     box-shadow: 4px 4px 0px 0px rgba(168, 108, 108, 1);
+    font-family: "IBM Plex Sans";
 }
 
 .caps-box img {
@@ -296,8 +397,8 @@ header h1{
 .grid2 img{
     grid-column: span 2;
     grid-row: span 2;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     align-self: center;
     margin: 0 auto;
     display: block;
@@ -319,6 +420,7 @@ h3 {
 .textgrid p {
     padding: 0px 75px 0px 75px
 }
+
 
 @media screen and (min-width: 800px){
     nav{
@@ -354,7 +456,50 @@ h3 {
     nav a:focus{
         text-decoration: underline;
     }
+
+    .title{
+        display: flex;
+        height: 600px;
+        width: auto;
+        background-image: url("../images/um.jpeg");
+        background-position: left;
+        opacity: 80%;
+        align-items: center;
+        justify-content: center;
+    }
     
+    .title > h1{
+        font-family: "Fugaz One";
+        text-align: center;
+        font-weight: bolder;
+        color: white;
+        -webkit-text-stroke-color: #BD8D82;
+        -webkit-text-stroke-width: 1px;
+        font-size: 100px;
+    }
+    
+    .about_text-block, .early_signs_text-block, .statistics_text-block, .why_text-block{
+        margin: auto;
+        text-align: center;
+        word-wrap: break-word;
+        font-family: "IBM Plex Sans";
+        padding: 30px;
+        transition: transform 250ms;
+        transform: translateY(-10px);
+    }
+    
+    div.about_text-block, div.statistics_text-block, div.why_text-block, div.early_signs_text-block{
+        width: auto;
+        border-radius: 20px;
+        transition: transform 250ms;
+        transform: translateY(-10px);
+    }
+
+    div.early_signs_text-block{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
     .here{
         color: rgb(144, 47, 47);
         background-color: white;
@@ -461,6 +606,24 @@ h3 {
     .grid button:hover{
         background-color: white;
     }
+    /* about us */
+    .grid2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .grid2 img{
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 250px;
+        width: 250px;
+        align-self: center;
+        margin: 0 auto;
+        display: block;
+    }
 
     .uhs-box, .caps-box,.togetherall-box, .psychiatry-box, .trotter-box, .campus_mind_works-box, .wolverine_wellness-box, .office_student_conflict_resolution-box, .continuum_of_care-box{
         background-color: #EAB7AB;
@@ -483,25 +646,6 @@ h3 {
         align-self: center;
         justify-content: center;
     }
-
-    /* about us page */
-    .grid2 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        align-self: center;
-        justify-content: center;
-    }
-    
-    .grid2 img{
-        grid-column: span 2;
-        grid-row: span 2;
-        height: 250px;
-        width: 250px;
-        align-self: center;
-        margin: 0 auto;
-        display: block;
-    }
 }
 
 
@@ -516,8 +660,8 @@ h3 {
         font-family: "IBM Plex Sans"
     }
     nav li{
-        display:inline;
-        padding-right:20px;
+        display: inline;
+        padding-right: 20px;
       
     }
     
@@ -539,7 +683,35 @@ h3 {
         font-family: "IBM Plex Sans";
         text-align: center;
     }
+
+    .title{
+        display: flex;
+        height: 600px;
+        width: fit-content;
+        background-image: url("../images/um.jpeg");
+        background-position: left;
+        opacity: 80%;
+        align-items: center;
+        justify-content: center;
+    }
     
+    .title > h1{
+        font-family: "Fugaz One";
+        text-align: center;
+        font-weight: bolder;
+        color: white;
+        -webkit-text-stroke-color: #BD8D82;
+        -webkit-text-stroke-width: 1px;
+        font-size: 150px;
+    }
+    
+    .here{
+        color: rgb(144, 47, 47);
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
     footer{
         background-color: #EAB7AB;
         color: black;
@@ -561,7 +733,7 @@ h3 {
     }
     
     div.about_text-block, div.early_signs_text-block, div.statistics_text-block, div.why_text-block{
-        width: 1300px;
+        width: 1000px;
         box-shadow: 4px 4px 0px 0px rgba(168, 108, 108, 1);
     }
     
@@ -578,6 +750,12 @@ h3 {
         margin-right: 20px;
         transition: transform 250ms;
     }
+
+    div.early_signs_text-block{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .clubs{
         display: flex;
         flex-direction: column;
@@ -634,6 +812,7 @@ h3 {
         font-size: 20px;
         font-family: "IBM Plex Sans";
         justify-content: flex-end;
+        padding-bottom: 20px;
     }
     
     .text-block > h1{
@@ -768,5 +947,9 @@ h3 {
         margin: 0 auto;
         display: block;
     }
+    
 } 
+
+
+
 
