@@ -2,20 +2,23 @@ body{
     background-color: #F7F3F2;
 }
 
-.skip {
-    position: absolute;
-    font: "IBM Plex Sans";
-    left: -9999px;
-    z-index: 999;
-    padding: 1em;
-    background-color: white;
-    opacity: 0;
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
 }
-    
-.skip:focus {
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 1;
+
+.skip a{
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus{
+    position: absolute;
+    top: 20px;
 }
 
 nav{
@@ -23,6 +26,7 @@ nav{
     text-align: right;
     font-family: "IBM Plex Sans";
     padding-top: 10px;
+    width: auto;
 }
 nav li{
     display: block;
@@ -164,6 +168,11 @@ div.about_text-block, div.early_signs_text-block, div.statistics_text-block, div
     width: auto;
     border-radius: 20px;
     box-shadow: 4px 4px 0px 0px rgba(168, 108, 108, 1);
+}
+
+div.about_text-block:hover, div.early_signs_text-block:hover, div.statistics_text-block:hover, div.why_text-block:hover{
+    transform: translateY(-10px);
+    transition: transform 250ms;
 }
 
 div.early_signs_text-block{
@@ -390,21 +399,21 @@ header{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    align-self: center;
     justify-content: center;
 }
 
 .grid2 img{
-    grid-column: span 2;
-    grid-row: span 2;
-    height: 150px;
-    width: 150px;
+    grid-column: auto;
+    grid-row: auto;
+    height: 100px;
+    width: 100px;
     align-self: center;
     margin: 0 auto;
     display: block;
 }
 
-h3 {
+
+h2 {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
@@ -418,7 +427,7 @@ h3 {
 }
 
 .textgrid p {
-    padding: 0px 75px 0px 75px
+    padding: 0px 50px 0px 50px
 }
 
 
@@ -428,7 +437,8 @@ h3 {
         padding-top: 15px;
         padding-bottom: 15px;
         text-align: center;
-        font-family: "IBM Plex Sans"
+        font-family: "IBM Plex Sans";
+        width: auto;
     }
     nav li{
         display: inline; 
@@ -455,6 +465,25 @@ h3 {
       
     nav a:focus{
         text-decoration: underline;
+    }
+
+    .skip a{
+        background: white;
+        left: 0;
+        padding: 6px;
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
+        z-index: 1;
+    }
+    
+    .skip a{
+        position: absolute;
+        top: -40px;
+    }
+    
+    .skip a:focus{
+        position: absolute;
+        top: 20px;
     }
 
     .title{
@@ -495,6 +524,11 @@ h3 {
         transform: translateY(-10px);
     }
 
+    div.about_text-block:hover, div.early_signs_text-block:hover, div.statistics_text-block:hover, div.why_text-block:hover{
+        transform: translateY(-10px);
+        transition: transform 250ms;
+    }
+    
     div.early_signs_text-block{
         padding-left: 200px;
         padding-right: 200px;
@@ -657,8 +691,10 @@ h3 {
         background-color: #F6C8BE;
         padding: 25px 0; 
         text-align: right;
-        font-family: "IBM Plex Sans"
+        font-family: "IBM Plex Sans";
+        width: auto;
     }
+    
     nav li{
         display: inline;
         padding-right: 20px;
@@ -682,6 +718,25 @@ h3 {
     h1{
         font-family: "IBM Plex Sans";
         text-align: center;
+    }
+
+    .skip a{
+        background: white;
+        left: 0;
+        padding: 6px;
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
+        z-index: 1;
+    }
+    
+    .skip a{
+        position: absolute;
+        top: -40px;
+    }
+    
+    .skip a:focus{
+        position: absolute;
+        top: 20px;
     }
 
     .title{
@@ -739,16 +794,15 @@ h3 {
     
     div.about_text-block, div.statistics_text-block{
         margin-left: 20px;
-        transition: transform 250ms;
     }
 
     div.about_text-block:hover, div.early_signs_text-block:hover, div.statistics_text-block:hover, div.why_text-block:hover{
         transform: translateY(-10px);
+        transition: transform 250ms;
     }
 
     div.early_signs_text-block, div.why_text-block{
         margin-right: 20px;
-        transition: transform 250ms;
     }
 
     div.early_signs_text-block{
