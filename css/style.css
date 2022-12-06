@@ -337,6 +337,7 @@ header{
     align-self: center;
     margin: 0 auto;
     display: block;
+    border: solid 5px #543E3E;
 }
 
 .grid p{
@@ -571,7 +572,11 @@ h2 {
     
     .overlay {
         position: absolute;
-        height: 200px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
         width: 300px;
         opacity: 0;
         transition: .5s ease;
@@ -615,6 +620,7 @@ h2 {
         align-self: center;
         margin: 0 auto;
         display: block;
+        border: solid 5px #457F8B;
     }
 
     .grid p{
@@ -636,6 +642,7 @@ h2 {
     .grid button:hover{
         background-color: white;
     }
+    
     /* about us */
     .grid2 {
         display: grid;
@@ -894,6 +901,7 @@ h2 {
         align-self: center;
         margin: 0 auto;
         display: block;
+        border: solid 5px #4B251D;
     }
 
     .grid p{
